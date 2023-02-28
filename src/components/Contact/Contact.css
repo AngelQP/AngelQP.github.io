@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.footer-title {
+.footer-title, .footer-title--light {
   font-size: 2rem;
   position: absolute;
   display: flex;
@@ -40,6 +40,11 @@
   z-index: 10;
 }
 
+.footer-title--light {
+  background-color: white;
+  color: #333;
+}
+
 .box-contacts {
   width: 380px;
   display: grid;
@@ -49,7 +54,7 @@
 
 }
 
-.box {
+.box, .box--light {
   justify-self: start;
   width: 350px;
   display: flex;
@@ -61,6 +66,12 @@
   gap: 10px;
 
   background-color: #3D3E42;
+}
+
+.box--light {
+  background-color: white;
+  color: #333;
+  border: 1px solid #333;
 }
 
 .box:hover {
@@ -77,7 +88,7 @@
   font-size: 1rem;
 }
 
-.footer-social {
+.footer-social, .footer-social--light {
   position: absolute;
   display: flex;
   justify-content: space-evenly;
@@ -93,6 +104,10 @@
   margin: auto;
 
   z-index: 10;
+}
+
+.footer-social--light {
+  background-color: white;
 }
 
 .footer-social--img {
@@ -118,11 +133,11 @@
   .box {
     width: 300px;
   }
-  .footer-title {
+  .footer-title, .footer-title--light {
     font-size: 1.8rem;
     top: -300px;
   }
-  .footer-social {
+  .footer-social, .footer-social--light {
     top: 300px;
   }
 

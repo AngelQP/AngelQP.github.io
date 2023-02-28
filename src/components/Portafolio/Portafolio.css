@@ -1,7 +1,11 @@
-.portafolio-title {
+.portafolio-title, .portafolio-title--light {
   font-size: 2.5rem;
   text-align: center;
   padding-top: 30px;
+}
+
+.portafolio-title--light {
+  color: #333;
 }
 
 .container-pages {
@@ -18,7 +22,5 @@
 @media (min-width: 768px) {
   .container-pages {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    /* grid-auto-rows: 350px; */
-
   }
 }

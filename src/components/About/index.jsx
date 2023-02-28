@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 import {CardAbout} from './CardAbout'
 
-export const About = () => {
+export const About = ({theme}) => {
 
   const arraySkills = [
     {path: '/assets/icons-card/html.svg',
@@ -32,24 +32,24 @@ export const About = () => {
     <section id='about' className='container about-container'>
 
       <article className="about-text">
-        <h2 className='about-title'>About</h2>
+        <h2 className={theme ? 'about-title' : 'about-title--light'}>About</h2>
         <div className='about-description'>
           
           <img src='/assets/icons/line.svg' className='about-description--line' alt='Icono de linea' />
 
-          <p className='about-paragraph'>Que tal soy Angel, curso la carrera de Ingeníera de Sistemas en la Universidad Tecnológica del Perú, <b className='about-paragraph--special'>me dedique aprender tecnologías para ser un frontend developer como HTML & CSS, Javascript, React, Bootstrap</b> entre otras. Además, me gusta mejorar mis Soft y Hard Skills para que cada proyecto que realice o participe tenga la mejor calidad, también se trabajar en equipo cumpliendo con mis responsabilidades y aportando diversos enfoques para la resolución de problemas.
+          <p className={theme ? 'about-paragraph' : 'about-paragraph--light'} >Que tal soy Angel, curso la carrera de Ingeníera de Sistemas en la Universidad Tecnológica del Perú, <b className='about-paragraph--special'>me dedique aprender tecnologías para ser un frontend developer como HTML & CSS, Javascript, React, Bootstrap</b> entre otras. Además, me gusta mejorar mis Soft y Hard Skills para que cada proyecto que realice o participe tenga la mejor calidad, también se trabajar en equipo cumpliendo con mis responsabilidades y aportando diversos enfoques para la resolución de problemas.
           </p>
 
         </div>
       </article>
 
       <article className='about-skills'>
-        <h2 className='skills-title'>My Skills</h2>
+        <h2 className={theme ? 'skills-title' : 'skills-title--light'}>My Skills</h2>
 
         <div className="container-skills">
           {arraySkills.map(skill => {
             return (
-              <CardAbout path={skill.path} alt={skill.path} text={skill.text} />
+              <CardAbout path={skill.path} alt={skill.path} text={skill.text} theme={theme} />
             )
           })}
         </div>

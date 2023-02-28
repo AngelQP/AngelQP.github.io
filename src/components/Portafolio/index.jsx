@@ -2,7 +2,7 @@ import React from 'react'
 import { CardPortafolio } from './CardPortafolio';
 import './Portafolio.css'
 
-export const Portafolio = () => {
+export const Portafolio = ({theme}) => {
 
   const appsWeb = [
   {
@@ -58,7 +58,7 @@ export const Portafolio = () => {
 
   return (
     <section className='container portafolio-container' id='portafolio'>
-      <h2 className='portafolio-title'>Portafolio</h2>
+      <h2 className={theme ? 'portafolio-title' : 'portafolio-title--light'}>Portafolio</h2>
       <div className="container-pages">
         {
           appsWeb.map((app,index) => {
@@ -70,6 +70,7 @@ export const Portafolio = () => {
               description={app.description}
               sourceGit={app.sourceGit}
               sourceWeb={app.sourceWeb}
+              theme={theme}
               />
             )
           })

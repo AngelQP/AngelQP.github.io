@@ -1,17 +1,17 @@
 import React from 'react'
 import './Hero.css'
 
-export const Hero = () => {
+export const Hero = ({theme}) => {
   return (
-    <section className='container hero-container'>
+    <section className={theme ? 'container hero-container' : 'container hero-container hero-container--light'} >
       <article className='hero-texts'>
-        <h1 className='title'>I'm <strong className='title--name'>Angel Eduardo</strong></h1>
-        <h3 className='title--second'>Front end Developer</h3>
+        <h1 className={ theme ? 'title' : 'title title--light'}>I'm <strong className='title--name'>Angel Eduardo</strong></h1>
+        <h3 className={theme ? 'title--second' : 'title--second--light'}>Front end Developer</h3>
         <h3 className="hero--second"></h3>
         <a href="#" className='hero-cta' >Dowloand CV</a>
       </article>
       <figure className='hero-figure'>
-        <img src="/assets/icons/hero.svg" alt="Imagen de hero" className='hero-image' />
+        <img src={theme ? "/assets/icons/hero.svg" : "/assets/icons/hero-light.svg"} alt="Imagen de hero" className='hero-image' />
       </figure>
     </section>
   )

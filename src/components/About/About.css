@@ -7,9 +7,13 @@
   padding-left: 20px;
 }
 
-.about-title {
+.about-title, .about-title--light {
   font-size: 3rem;
   letter-spacing: 2px;
+}
+
+.about-title--light{
+  color: #333;
 }
 
 .about-description{
@@ -29,8 +33,12 @@
   overflow: hidden;
 }
 
-.about-paragraph {
+.about-paragraph, .about-paragraph--light {
   font-size: 1.2rem;
+}
+
+.about-paragraph--light {
+  color: #333;
 }
 
 .about-paragraph--special {
@@ -41,11 +49,15 @@
   margin-top: 50px;
 }
 
-.skills-title {
+.skills-title, .skills-title--light {
   font-size: 2.5rem;
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.skills-title--light {
+  color: #333;
 }
 
 .container-skills {
