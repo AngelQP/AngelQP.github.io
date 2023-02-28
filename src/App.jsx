@@ -7,14 +7,23 @@ import { Contact } from './components/Contact'
 
 function App() {
 
+  /* Por defecto en oscuro */
+
+  const [theme, setChangeTheme] = useState(true);
+
+  const toggleTheme = () => {
+    setChangeTheme(!theme);
+    console.log(theme);
+  }
+
 
   return (
-    <div className="App">
-      <Header></Header>
-      <Hero></Hero>
-      <About></About>
-      <Portafolio></Portafolio>
-      <Contact></Contact>
+    <div className={theme ? 'App' : 'App-light'}>
+      <Header theme={theme} toggleTheme={toggleTheme}></Header>
+      <Hero theme={theme}></Hero>
+      <About theme={theme}></About>
+      <Portafolio theme={theme}></Portafolio>
+      <Contact theme={theme}></Contact>
     </div>
   )
 }

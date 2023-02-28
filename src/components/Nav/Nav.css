@@ -23,6 +23,7 @@
   --state-hamburguer: scale(0);
 }
 
+
 .nav__hamburguer, .nav__close {
   cursor: pointer;
   grid-column: -2/-1;
@@ -47,16 +48,30 @@
   z-index: 10;
 }
 
-.nav-logo--main {
+.nav-logo--light, .nav-logo--dark {
+  height: 160px;
   width: 160px;
-  object-fit: cover;
+  background-image: url('/Logos/Angel-Web-dark.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-logo--dark {
+  height: 160px;
+  width: 160px;
+  background-image: url('/Logos/Angel-Web-light.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nav-menu {
   padding: 10px;
 }
+
 .nav-list {
-  background-color: #000;
+  /* background-color: #eee; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -73,21 +88,98 @@
   transition: .3s transform;
 }
 
+.nav-list--light {
+  background-color: #eee;
+}
+
+.nav-list--dark {
+  background-color: #000;
+}
+
 .nav-item {
+  display: flex;
+  align-items: center;
   list-style: none;
 }
 
 .nav-link {
   font-size: 1.2rem;
+  font-weight: 400;
   text-decoration: none;
   opacity: 0.5;
   transition: opacity .3s;
+  padding: 5px;
+
+  /* color: #333; */
 }
 
 .nav-link:hover {
   opacity: 1;
+  border-bottom: 1px solid white;
+
   transition: opacity .3s;
 }
+
+.nav-img--light {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  padding: 10px;
+
+  background-image: url('/assets/icons/moon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.nav-img--dark {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  padding: 10px;
+
+  background-image: url('/assets/icons/sun.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+
+  cursor: pointer;
+}
+
+/* light */
+.nav-link--light {
+  font-size: 1.2rem;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity .3s;
+  padding: 5px;
+  /* color: white; */
+  color: #333;
+}
+.nav-link--light:hover {
+  opacity: 1;
+  border-bottom: 1px solid #333;
+
+  transition: opacity .3s;
+}
+.nav-img--light {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  padding: 10px;
+
+  background-image: url('/assets/icons/moon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+/* /light */
+
 
 @media(min-width: 768px) {
 
@@ -96,17 +188,17 @@
     --state-menu: translate(0);
     grid-auto-flow: column;
   }
-
+  
   .nav:target {
     --state-close: scale(0);
   }
-
+  
   .nav-list {
     padding: 0;
     background-color: unset;
     position: unset;
     grid-auto-flow: column;
-
+    
     gap: 1.5em;
 
     transform: unset;
@@ -116,8 +208,11 @@
   }
 
   .nav-link {
-    font-size: 1rem;
     letter-spacing: none;
+  }
+
+  .nav-link--light {
+    color: #333;
   }
 
 }
