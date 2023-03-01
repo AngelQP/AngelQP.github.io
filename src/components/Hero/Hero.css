@@ -19,11 +19,14 @@
 }
 
 .title {
+  width: 100%;
+  /* font-family: var(--font-1); */
   display: flex;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 2.5rem;
   letter-spacing: 5px;
+  gap: 5px;
 
   align-items: first baseline;
 }
@@ -33,17 +36,16 @@
 }
 
 .title .title--name {
-  display: inline-block;
+  width: 390px;
   font-family: var(--font-1);
   letter-spacing: -1px;
   font-size: 3rem;
   color: #ffbd59;
   font-weight: 500;
-  width: 13ch;
   white-space: nowrap;
 
-  border-right: 4px solid;
-  animation: typing 2s steps(14), blink .5s infinite step-start alternate backwards;
+  border-right: 3px solid;
+  animation: typing 2.5s steps(35), blink .7s infinite step-end alternate ;
   overflow: hidden;
 }
 
