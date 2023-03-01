@@ -8,7 +8,9 @@ export const Hero = ({theme}) => {
         <h1 className={ theme ? 'title' : 'title title--light'}>I'm <strong className='title--name'>Angel Eduardo</strong></h1>
         <h3 className={theme ? 'title--second' : 'title--second--light'}>Front end Developer</h3>
         <h3 className="hero--second"></h3>
-        <a href="#" className='hero-cta' >Dowloand CV</a>
+        <a href="https://drive.google.com/file/d/1gpCVxe6g8xGE6rsCyOVtI85SRKWfSTFo/view?usp=share_link" 
+        className='hero-cta' 
+        target="_blank">Dowloand CV</a>
       </article>
       <figure className='hero-figure'>
         <img src={theme ? "/assets/icons/hero.svg" : "/assets/icons/hero-light.svg"} alt="Imagen de hero" className='hero-image' />
