@@ -34,7 +34,7 @@ export const Contact = ({theme}) => {
           <a href="https://github.com/AngelQP" className='footer-social--link' target="_blank">
             <img src={theme ? "/assets/icons/github.svg" : "/assets/icons/github-light.svg"} alt="Icono de Github" className='footer-social--img'/>
           </a>
-          <a href="https://wa.me/979379654?text=Hola😀%20estoy%20interesado(a)%20tu%20perfil%20de%20programador%20frontend 👨‍💻" className='footer-social--link' target="_blank">
+          <a href="https://wa.me/+51979379654?text=Hola😀%20estoy%20interesado(a)%20tu%20perfil%20de%20programador%20frontend 👨‍💻" className='footer-social--link' target="_blank">
             <img src={theme ? "/assets/icons/wpp.svg" : "/assets/icons/wpp-light.svg"} alt="Icono de whatsapp" className='footer-social--img'/>
           </a>
         </div>
